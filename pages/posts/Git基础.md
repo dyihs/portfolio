@@ -99,4 +99,4 @@ git status
 
 查看git现在的状态，显示文件颜色为绿色表示文件在git管理的范围，如图2-1。
 
-![img](https://cdn.nlark.com/yuque/0/2023/png/12871800/1689233488884-ac2bc166-f74a-4eb9-a325-b1125567a4ab.png)
+![](https://nuibi.oss-cn-beijing.aliyuncs.com/img/20230728150041.png)
