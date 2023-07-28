@@ -292,6 +292,75 @@ git cat-file -t f0c5a1731e463f7bce63f60af8abb955dfc772a5
 
 - TODO：使用命令了解 b3 文件
 
-## 7 分离头指针情况下注意事项
+## 7、分离头指针情况下注意事项
 
- 分离头指针是没有基于某个branch进行变更。如何在切换分支时不小心使用了commit id作为分支名称，就会出现分离头指针的情况，例如：  
+分离头指针是没有基于某个branch进行变更。如何在切换分支时不小心使用了commit id作为分支名称，就会出现分离头指针的情况，例如：  
+
+```bash
+git checkout 7c02a5d203e
+
+上述代码输出结果：
+注意：正在切换到 '7c02a5d203e'。 
+您正处于分离头指针状态。您可以查看、做试验性的修改及提交，并且您可以在切换回一个分支时，丢弃在此状态下所做的提交而不对分支造成影响。
+如果您想要通过创建分支来保留在此状态下所做的提交，您可以通过在 switch 命令中添加参数 -c 来实现（现在或稍后）。例如：
+
+git switch -c <新分支名>
+或者撤销此操作：
+git switch -
+通过将配置变量 advice.detachedHead 设置为 false 来关闭此建议
+HEAD 目前位于 7c02a5d ADD styles.css
+```
+
+分离头指针是在没有分支的情况下工作，如果在该状态下commit了很多任务，但是在切换回main分支后分离头指针的commit记录会被git当垃圾清理掉，之前提交的任务就会消失。因为分离头指针没有与某个branch分支挂钩，所以在提交时需要与某个分支挂钩才会被清理。如下所示：
+
+```bash
+git checkout main
+输出结果
+
+警告：您正丢下 1 个提交，未和任何分支关联：
+
+d5446b0 Background to green
+
+如果您想要通过创建新分支保存它，这可能是一个好时候。 如下操作：
+
+git branch <新分支名> d5446b0
+
+切换到分支 'main'
+```
+
+在切换分支时会提醒为分离头指针的commit建立一个分支（git branch <新分支名> <分离头指针commit id>）分离头指针的好处是，在做实验性提交时，如果实验的并不理想，直接切换到分支就会自动清理掉之前的提交历史记录。但是如果发现分离头指针提交的内容重要，在切换分支后依然可以创建分支保存分离头指针的内容，然后查看git log，发现保存了分离头指针的内容。
+
+## 8、进一步理解 HEAD和 branch
+
+ 可以基于分支创建一个分支，-b 表示创建好分支后直接切换到该分支，如下命令所示：  
+
+```bash
+git checkout -b fix-readme fix-css
+切换到一个新分支 'fix-readme'
+```
+
+使用如下命令查看HEAD指向，发现HEAD指向了两个分支，分别是基于该分支和新分支。
+
+```bash
+git log -n1
+# 输出结果：
+commit d5446b0161ed178168808ea2838e7f9b03c15260 (HEAD -> fix-readme, fix-css)
+Author: shiyd <shi.yaodong@foxmail.com>
+Date:   Sat Jan 28 00:33:40 2023 +0800
+
+    Background to green
+```
+
+ 比较两个commit的差异，按 q 退出： 
+
+```bash
+git diff d5446b0161ed 7c02a5d203e8
+
+git diff HEAD HEAD~1 # 当前HEAD指向的分支的commit与前一个commit比较
+git diff HEAD HEAD^
+
+git diff HEAD HEAD~2 # 当前HEAD指向的分支的commit与前两个commit比较
+git diff HEAD HEAD^^
+```
+
+![](https://nuibi.oss-cn-beijing.aliyuncs.com/img/20230728151234.png)
