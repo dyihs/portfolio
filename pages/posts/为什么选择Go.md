@@ -1,6 +1,6 @@
 ---
 title: 为什么选择Go
-date: 2021/10/17
+date: 2019/10/17
 description: 何为Runtime、Go的编译过程、Go语言是如何运行的
 tag: Go
 author: shiyd
@@ -53,7 +53,7 @@ fun main(){
 - 函数调用内联
 - 逃逸分析
 
-### **中见码生成：**
+### **中间码生成：**
 
 - 为了处理不同平台的差异，生成中间代码（SSA）
 - 查看从代码到SSA中间码的整个过程
@@ -67,7 +67,7 @@ export GOSSAFUNC=main
 go build
 ```
 
-![Untitled](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/4399edba-6728-404d-944d-1c18d101a655/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230105%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230105T095230Z&X-Amz-Expires=86400&X-Amz-Signature=ed068ba192b141f8abf6bfeba08010d938364df1808b02704488ae941c20c812&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Untitled.png%22&x-id=GetObject)
+![](https://nuibi.oss-cn-beijing.aliyuncs.com/img/20230730191018.png)
 
 ### 机器码生成
 
