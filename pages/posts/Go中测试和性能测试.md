@@ -1,6 +1,6 @@
 ---
-title: Go中代码测试和性能测试
-date: 2021/10/17
+title: Go中代码性能测试
+date: 2019/10/17
 description: Go中的代码测试和性能测试简单方法
 tag: Go
 author: shiyd
@@ -73,7 +73,7 @@ func TestTriangle(t *testing.T) {
 
 在 Goland 代码编辑器中集成了各种测试方法，如下图3-1:
 
-![3-1](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/71765b92-2e69-4275-9148-05cb03c0b189/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230103%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230103T050036Z&X-Amz-Expires=86400&X-Amz-Signature=8745c8741bc6b1dfe3a6473677c1e9a4c5954a94f19b3a26699b70cf6660752f&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Untitled.png%22&x-id=GetObject)
+![](https://nuibi.oss-cn-beijing.aliyuncs.com/img/20230730162506.png)
 
 **命令行测试代码覆盖率**
 
@@ -136,7 +136,7 @@ Flags:
 
 这里使用 ` go tool cover -html=c.out ` 命令查看代码覆盖率，显示为html页面，如图3-2所示：
 
-![3-2](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/c414e4aa-ff1d-4b72-9f04-1b9d57f4a869/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230103%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230103T050442Z&X-Amz-Expires=86400&X-Amz-Signature=992119f9e402f00e9bd1378fe3bb8c5b8a411772ccca10921f9df4b5a3ea1597&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Untitled.png%22&x-id=GetObject)
+![](https://nuibi.oss-cn-beijing.aliyuncs.com/img/20230730163005.png)
 
 **Benchmark 性能测试，测试代码如下：**
 
@@ -204,4 +204,4 @@ Entering interactive mode (type "help" for commands, "o" for options)
 (pprof)
 ```
 
-![3-3](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/ff644e62-5f03-4040-b5a4-12ef1bb5975f/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230103%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230103T050511Z&X-Amz-Expires=86400&X-Amz-Signature=18602de526dd43db10db8e219e56750bd6ea4d2fe0a11bb1fc51240dc31b526b&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Untitled.png%22&x-id=GetObject)
+![](https://nuibi.oss-cn-beijing.aliyuncs.com/img/20230730162756.png)
