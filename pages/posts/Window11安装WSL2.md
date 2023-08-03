@@ -1,6 +1,6 @@
 ---
-title: 安装WSL2
-date: 2021/12/18
+title: Windows11安装WSL2
+date: 2021/9/18
 description: Windows11安装WSL2
 tag: 解决方案
 author: shiyd
@@ -63,6 +63,8 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-L
 
 ## 参考目录
 
-[1]: https://blog.csdn.net/weixin_46211269/article/details/115466326 (报错误情况 )
-[2]: https://jspang.com/article/80 (Windows11 中安装Linux 教程 | WSL2的使用)
-[3]: https://learn.microsoft.com/zh-cn/windows/wsl/install-manual (旧版 WSL 的手动安装步骤)
+[1] : https://blog.csdn.net/weixin_46211269/article/details/115466326 (报错解决方法)
+
+[2] : https://jspang.com/article/80 (Windows11 中安装Linux 教程 | WSL2的使用)
+
+[3] : https://learn.microsoft.com/zh-cn/windows/wsl/install-manual (中文官网安装教程)
