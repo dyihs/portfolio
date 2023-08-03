@@ -15,19 +15,19 @@ author: shiyd
 
 ## 安装WSL2
 
-- **第一步**：启动WSL。用管理员身份打开`PowerShell`.(打开方法见视频)，然后在PowerShell中，输入下面的命令。
+- 第一步：启动WSL。用管理员身份打开`PowerShell`.(打开方法见视频)，然后在PowerShell中，输入下面的命令。
 
 ```powershell
 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
 ```
 
-- **第二步**：启动虚拟机给功能。同样在PoweShell中输入下面的命令。输入完命令后，要重启一下电脑，然后再进行第三步。
+- 第二步：启动虚拟机给功能。同样在PoweShell中输入下面的命令。输入完命令后，要重启一下电脑，然后再进行第三步。
 
 ```powshell
 dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
 ```
 
-- **第三步**：将 WSL2 设置为默认版本。打开 PowerShell，然后在安装新的 Linux 发行版时运行以下命令，将 WSL 2 设置为默认版本，命令如下。
+- 第三步：将 WSL2 设置为默认版本。打开 PowerShell，然后在安装新的 Linux 发行版时运行以下命令，将 WSL 2 设置为默认版本，命令如下。
 
 ```powershell
 wsl --set-default-version 2
@@ -37,12 +37,12 @@ wsl --set-default-version 2
 
 ## 安装 Ubuntu 发行版
 
-- **第一步：**打开`Microsoft Store`，并选择你偏好的 Linux 分发版。我这里选择`Ubuntu`进行安装。下安装完成后，先不要打开
-- **第二步：**下载一下 Linux 内核更新包，下载链接如下，下载完成后并安装，默认安装即可，到这里就可以使用了。
+- 第一步：打开`Microsoft Store`，并选择你偏好的 Linux 分发版。我这里选择`Ubuntu`进行安装。下安装完成后，先不要打开
+- 第二步：下载一下 Linux 内核更新包，下载链接如下，下载完成后并安装，默认安装即可，到这里就可以使用了。
 
 https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
 
-- **第三步：**如果是首次进入，需要设置用户名和密码。当进入系统后，可以使用下面的命令来查看当前Ubuntu的版本。
+- 第三步：如果是首次进入，需要设置用户名和密码。当进入系统后，可以使用下面的命令来查看当前Ubuntu的版本。
 
 ```bash
 lsb_release -a
