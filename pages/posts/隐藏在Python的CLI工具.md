@@ -14,7 +14,7 @@ python -m gzip --decompress pypi.db.gz
 
 如果 Windows 中没有安装 gzip 实用工具，可以使用该命令进行解压，如下图所示，使用该命令加压后的文件。
 
-![img](https://cdn.nlark.com/yuque/0/2023/png/12871800/1691127875205-6446ebe6-ec01-4788-986e-e6d2865d2671.png)
+![](https://nuibi.oss-cn-beijing.aliyuncs.com/img/20230804143617.png)
 
 ## 2. 查看标准库位置
 
@@ -22,7 +22,7 @@ python -m gzip --decompress pypi.db.gz
 python -m site
 ```
 
-![img](https://cdn.nlark.com/yuque/0/2023/png/12871800/1691130416286-097fa1b5-16f5-4dbe-a47b-6816b4780de2.png)
+![](https://nuibi.oss-cn-beijing.aliyuncs.com/img/20230804143709.png)
 
 `python -m site` 这个命令的主要功能是查看 Python 解释器的模块搜索路径和安装位置信息。
 
@@ -40,7 +40,7 @@ python -m site
 
 在需要分享的目录下，按住 shift 右击选择 powershell 或者 cmd，输入如下命令，第一条没有指定端口，默认是8000端口，第二条指定80端口，可以不输入端口直接访问。
 
-![img](https://cdn.nlark.com/yuque/0/2023/png/12871800/1691044522684-721d948e-4704-4b49-948a-4315c8aeeed7.png?x-oss-process=image%2Fresize%2Cw_908%2Climit_0)
+![](https://nuibi.oss-cn-beijing.aliyuncs.com/img/20230804143745.png)
 
 ## 4. base64
 
@@ -48,7 +48,7 @@ python -m site
 python3.11 -m base64 -h
 ```
 
-![img](https://cdn.nlark.com/yuque/0/2023/png/12871800/1691128368499-504090ce-d1bc-41e1-b3d7-95efd7eb567b.png)
+![](https://nuibi.oss-cn-beijing.aliyuncs.com/img/20230804143926.png)
 
 ## 5. 开启异步Python控制台
 
@@ -56,7 +56,7 @@ python3.11 -m base64 -h
 python -m asyncio
 ```
 
-![img](https://cdn.nlark.com/yuque/0/2023/png/12871800/1691128452189-0085cf43-c07b-4e01-aa57-ad75d2731f14.png)
+![](https://nuibi.oss-cn-beijing.aliyuncs.com/img/20230804144001.png)
 
 `python -m asyncio` 这个命令的主要功能是运行 Python 解释器，并加载 `asyncio` 模块。
 
@@ -70,7 +70,7 @@ python -m asyncio
 python -m tokenize cgi.py | head -n 10
 ```
 
-![img](https://cdn.nlark.com/yuque/0/2023/png/12871800/1691129750529-3aa669dc-d776-4e9a-8a45-fd6246519908.png)
+![](https://nuibi.oss-cn-beijing.aliyuncs.com/img/20230804144228.png)
 
 这个命令的主要功能是对名为 `cgi.py` 的 Python 脚本文件进行词法分析，并显示其前10个词法标记。
 
@@ -91,7 +91,7 @@ python -m tokenize cgi.py | head -n 10
 python -m ast cgi.py | head -n 10
 ```
 
-![img](https://cdn.nlark.com/yuque/0/2023/png/12871800/1691129055100-d9e28fc8-1753-407c-a4c3-8008cd7bbf51.png)
+![](https://nuibi.oss-cn-beijing.aliyuncs.com/img/20230804144316.png)
 
 这个命令的主要功能是对名为 `cgi.py` 的 Python 脚本文件进行语法分析，并显示其抽象语法树（AST）的前 10 行。具体来说：
 
@@ -108,7 +108,7 @@ python -m ast cgi.py | head -n 10
 echo '{"foo": "bar", "baz": [1, 2, 3]}' | python -m json.tool
 ```
 
-![img](https://cdn.nlark.com/yuque/0/2023/png/12871800/1691129594315-733fc7fd-4e0a-4a01-b1f3-ca67e631c515.png)
+![](https://nuibi.oss-cn-beijing.aliyuncs.com/img/20230804144340.png)
 
 提示：如果 json 文档无效，也会以非零状态退出。
 
@@ -120,7 +120,7 @@ echo '{"foo": "bar", "baz": [1, 2, 3]}' | python -m json.tool
 python -m random
 ```
 
-![img](https://cdn.nlark.com/yuque/0/2023/png/12871800/1691129803512-c1446837-f328-45f3-a330-6b681285f627.png)
+![](https://nuibi.oss-cn-beijing.aliyuncs.com/img/20230804144503.png)
 
 ## 10. nntplib 
 
@@ -130,7 +130,7 @@ python -m nntplib
 
 内置演示 - 显示新闻组中的最新文章，它默认为gmane.comp.python.general：
 
-![img](https://cdn.nlark.com/yuque/0/2023/png/12871800/1691129892292-827a358b-c76a-47dc-aad6-83ffd22e2df2.png)
+![](https://nuibi.oss-cn-beijing.aliyuncs.com/img/20230804144503.png)
 
 `python -m nntplib` 这个命令的主要功能是运行 Python 解释器，并加载 `nntplib` 模块。
 
@@ -150,4 +150,4 @@ python -m nntplib
 python -m calendar
 ```
 
-![img](https://cdn.nlark.com/yuque/0/2023/png/12871800/1691130003116-65c5a9b4-e945-4e04-8a8d-7ba10530bb08.png)
+![](https://nuibi.oss-cn-beijing.aliyuncs.com/img/20230804145054.png)
