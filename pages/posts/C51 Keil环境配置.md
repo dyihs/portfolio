@@ -6,7 +6,7 @@ tag: 嵌入式
 author: shiyd
 ---
 
-[toc]
+[TOC]
 ### 配置 C51 版本 Keil 环境
 
 下载 STC8 烧录软件：https://www.stcmcudata.com/ ，打开之后选择芯片型号为 STC8H8K64U 然后选择“Keil仿真设置”，点击添加头文件到 Keil中，选择 Keil 的第一层安装目录，确定后则会添加成功，在 Keil 安装目录 Keil_v5\C51\INC\STC 中会显示 STC8H8 的头文件。
