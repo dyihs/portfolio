@@ -78,8 +78,8 @@ git init git-practise
 cd git-practise
 git branch -m main # git 默认分支是master，github仓库使用的是main，切换成main
 git config --global --list # 查看git global作用域的配置信息
-git config --local user.name 'shiyd' #设置local作用域的user.name
-git config --local user.email 'shiyd@foxmail.com' # 设置local作用域的user.email
+git config --local user.name 'name' #设置local作用域的user.name
+git config --local user.email 'name@email.com' # 设置local作用域的user.email
 git config --local --list # 查看配置信息
 ```
 
